@@ -1,0 +1,180 @@
+.container{
+  display:flex;
+}
+
+header {
+  background: black;
+  margin-top: -18px;
+  text-align: center;
+}
+
+
+nav ul {
+  position: relative;
+  height: 70px;
+  padding-top: 50px;
+  background: goldenrod;
+}
+.flex-nav ul{
+  flex-wrap:wrap;
+  /* flex */
+}
+
+nav ul li {
+
+  display: inline;
+  margin: 0 1.5% 24px 1.5%;
+  border-radius: 80px;
+  background-color: bisque;
+  padding: 20px;
+}
+
+ #logo img {
+  margin: left;
+  margin-top: -18px;
+  width: 250px;
+  height: 150px;
+  mask-border: 2px;
+}
+
+#search-button {
+  background-color: rgb(161, 159, 159);
+margin: 12px;
+border-top: 7px;
+padding-right: 25px;
+padding-left: 25px;
+  
+}
+
+.sidenav {
+  height: 100%;
+  width: 208px;
+  /* Set the width of the sidebar */
+  position: fixed;
+  /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1;
+  /* Stay on top */
+  top: 0;
+  /* Stay at the top */
+  left: 0;
+  background-color: #111;
+  /* Black */
+  /* overflow-x: hidden; Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #d6c578;
+  display: flex;
+
+}
+
+h1 {
+  color: #f1f1f1;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+  margin-left: 160px;
+  /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+body{
+  background-color:black;
+}
+
+.flex-container
+{
+  display:flex;
+}
+.main-content{
+  flex:auto;
+  margin-left:200px;
+}
+.container {
+  display: flex;
+  flex-wrap:wrap;
+  text-align:center;
+  min-height:100vh
+}
+.box{
+  justify-content:space-between;
+  height: 45vh;
+  /* flex-grow:1; */
+  flex-basis:413px;
+}
+/* .box2{
+  flex-basis:250px; 
+} */
+
+.box3{
+  flex-grow:10;
+}
+/* .box4{
+  flex-basis:400px; 
+} */
+.box img{
+  object-fit:cover;
+  max-height: 100%;
+  min-width: 100%;
+}
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding:50px;
+}
+.flex-nav .social {
+  flex:1;
+}
+.flex-nav ul {
+  border:1px solid black;
+  list-style: none;
+  margin: 0;
+  padding:0;
+  display:flex;
+}
+
+
+@media all and (max-width:1000px) {
+  
+  .flex-nav ul {
+    flex-wrap:wrap;
+  }
+
+  .flex-nav li {
+    flex:1 1 50%;
+  }
+
+  .flex-nav .social {
+    flex:1 1 25%;
+  }
+
+}
+
+@media all and (max-width:500px) {
+  
+  .flex-nav li {
+    flex-basis:100%;
+  }
+
+}

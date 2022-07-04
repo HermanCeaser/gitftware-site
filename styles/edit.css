@@ -1,0 +1,44 @@
+body {
+  margin: left 30px;
+  margin-right: 30px;
+  background-color: rgb(208, 224, 224)255, 255, 255);
+}
+
+p {
+  display: block;
+}
+
+div {
+  border: 5px;
+  /* width: 300px; */
+  margin: 10px;
+  padding: 30px;
+}
+
+img {
+  float: right;
+}
+
+.header,
+.content,
+.footer {
+  border: 10px solid red;
+  display:inline;
+  flex:0 1 auto;
+
+}
+/* .header{
+  flex:0 1 auto;
+}
+.content{
+  flex:2 1 auto;
+
+}
+.footer{
+  flex:0 1 auto;
+} */
+.flex-container{
+  display:flex;
+  /* flex-wrap:wrap; */
+  /* justify-content:flex-end; */
+}
