@@ -1,115 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>GIFTWARE UG</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="styles/design.css">
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>GIFTWARE UG</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="styles/main.css">
+		<script type="module" src="app.js"></script>
+	</head>
 
-<body>
-	<div class="container">
-		<div class="sidenav">
-			<h1>SERVICES</h1>
-			<a href="#">Gift Wrapping</a>
-			<a href="#">Gift Hampers</a>
-			<a href="#">Flower Bouquets</a>
-			<a href="#">Decorations</a>
-			<a href="#">Photo Booths</a>
-			<a href="#">Money Cakes</a>
-			<a href="#">Surprise with Sax</a>
-			<a href="#">Event Planning</a>
-		</div>
-		<div class="main-content">
-			<header>
-				<nav>
-					<div id="logo">
+	<body>
+		<b id="backdrop" class="bg-overlay"></b>
+		<div class="container">
+			<!--Sidebar -->
+			<aside id="sidebar">
+				<header id="sideheader">
+					<h2 style="color:bisque;">SERVICES</h2>
+					<button id="closenav">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+							stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
+							<line x1="18" y1="6" x2="6" y2="18"></line>
+							<line x1="6" y1="6" x2="18" y2="18"></line>
+						</svg>
+
+					</button>
+				</header>
+				<ul>
+					<li class="nav-category"><a href="#"><span>Gift Wrapping</span></a></li>
+					<li class="nav-category"><a href="#"><span>Gift Hampers</span></a></li>
+					<li class="nav-category"><a href="#"><span>Flower Bouquets</span></a></li>
+					<li class="nav-category"><a href="#"><span>Decorations</span> </a> </li>
+					<li class="nav-category"><a href="#"><span>Photo Booths</span></a></li>
+					<li class="nav-category"><a href="#"><span>Money Cakes</span></a></li>
+					<li class="nav-category"><a href="#"><span>Surprise with</span></a></li>
+					<li class="nav-category"><a href="#"><span>Event Planning</span></a></li>
+
+				</ul>
+			</aside>
+			<!-- End Sidebar -->
+
+			<!--Main -->
+			<div class="main">
+				<header class="header">
+					<button id="opennav">
+
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+							stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+							class="feather feather-menu">
+							<line x1="3" y1="12" x2="21" y2="12"></line>
+							<line x1="3" y1="6" x2="21" y2="6"></line>
+							<line x1="3" y1="18" x2="21" y2="18"></line>
+						</svg>
+					</button>
+					<a id="logo">
 						<img src="images/giftware logo.jpg" alt="photo of logo">
+					</a>
+					<nav>
+
+						<ul>
+							<li>
+								<a href="#">Home</a>
+							</li>
+							<li>
+								<a href="#">About</a>
+							</li>
+							<li>
+								<a href="#">Contact Us</a>
+							</li>
+						</ul>
+
+
+					</nav>
+
+
+				</header>
+				<div class="search">
+					<input type="text" name="search" placeholder="Search">
+					<button type="button">
+						<i class="fa fa-search"></i>
+					</button>
+				</div>
+				<section class="content">
+					<div class="container-content">
+						<h2>Available Products</h2>
+						<div id="content"></div>
+						
 					</div>
-					<ul>
-						<li>
-							<a href="#">HOME</a>
-						</li>
-						<li>
-							<a href="#">ABOUT</a>
-						</li>
-						<li>
-							<a href="#">CONTACTS</a>
-						</li>
-					</ul>
-					<input type="text" placeholder="search">
-					<button id="search-button" type="button">search</button>
-				</nav>
+				</section>
+				<!-- COMPONENT: PRODUCTS //END -->
+				<!-- Footer -->
+				<footer>
+					<section class="py-12 text-white">
+						<div class="container-content">
+
+							<div style="display: flex; flex-wrap: wrap;">
+								<aside class="quick-links link1">
+									<p class="my-4">
+										Giftware Ug<br> © 2022 &nbsp;All rights reserved.
+									</p>
+								</aside> <!-- col .// -->
+								<aside class="quick-links link2">
+									<h3 class="semibold"> Store </h3>
+									<ul class="mt-2 space-y-1">
+										<li>
+											<a href="#" class="opacity-70 hover:opacity-100"> Join us </a>
+										</li>
+										<li>
+											<a href="#" class="opacity-70 hover:opacity-100"> Find store </a>
+										</li>
+										<li>
+											<a href="#" class="opacity-70 hover:opacity-100"> Categories </a>
+										</li>
+										<li>
+											<a href="#" class="opacity-70 hover:opacity-100"> Partnership </a>
+										</li>
+									</ul>
+								</aside> <!-- col .// -->
+								<aside class="quick-links link2">
+									<h3 class="semibold"> About </h3>
+									<ul class="mt-2 space-y-1">
+										<li>
+											<a href="#" class="opacity-70 hover:opacity-100"> About us </a>
+										</li>
+										<li>
+											<a href="#" class="opacity-70 hover:opacity-100"> Our history </a>
+										</li>
+										<li>
+											<a href="#" class="opacity-70 hover:opacity-100"> Our team </a>
+										</li>
+										<li>
+											<a href="#" class="opacity-70 hover:opacity-100"> Offices </a>
+										</li>
+									</ul>
+								</aside> <!-- col .// -->
+								<aside class="quick-links link2">
+									<h3 class="semibold"> Help </h3>
+									<ul class="mt-2 space-y-1">
+										<li>
+											<a href="#" class="opacity-70 hover:opacity-100"> Contact us </a>
+										</li>
+										<li>
+											<a href="#" class="opacity-70 hover:opacity-100"> Submit ticket </a>
+										</li>
+										<li>
+											<a href="#" class="opacity-70 hover:opacity-100"> FAQs </a>
+										</li>
+										<li>
+											<a href="#" class="opacity-70 hover:opacity-100"> Refunds </a>
+										</li>
+									</ul>
+								</aside> <!-- col .// -->
+								<aside class="quick-links link2">
+									<h3 class="semibold"> Links </h3>
+									<ul class="mt-2 space-y-1">
+										<li>
+											<a href="#" class="opacity-70 hover:opacity-100"> Our terms </a>
+										</li>
+										<li>
+											<a href="#" class="opacity-70 hover:opacity-100"> Privacy setting</a>
+										</li>
+										<li>
+											<a href="#" class="opacity-70 hover:opacity-100"> Sign up </a>
+										</li>
+									</ul>
+								</aside> <!-- col .// -->
+								<aside class="quick-links link1">
+									<h3 class="semibold mb-2">Newsletter</h3>
+									<p class="text-white text-opacity-70 mb-5">
+										Stay in touch with latest updates about our products and offers
+									</p>
+									<!-- email start-->
+									<form class="flex w-80">
+										<input type="email" placeholder="Email">
+
+										<button id="email-btn">
+											Join
+										</button>
+									</form>
+									<!-- email end-->
+								</aside> <!-- col .// -->
+							</div> <!-- grid .// -->
+						</div> <!-- container .// -->
+					</section>
+
+					<!-- section footer bottom  -->
+					<section class="bg-blue-700 py-6 text-white">
+						<div class="max-w-screen-xl mx-auto px-4">
+							<nav>
+								<ul class="flex-nav">
+									<li class="social">
+									<li class="social">
+										<a href="http://facebook.com/Giftware Ug.developer">
+											<span class="icon"><i class="fa fa-facebook"></i></span>
+											<span class="text">Giftware Ug</span>
+										</a>
+									</li>
+									<li class="social">
+										<a href="http://instagram.com/giftware_ug ">
+											<span class="icon"><i class="fa fa-instagram"></i></span>
+											<span class="text">giftware_ug</span>
+										</a>
+									</li>
+								</ul>
+							</nav>
+						</div> <!-- container .// -->
+					</section>
+					<!-- section footer bottom  end -->
 
 
-			</header>
-			<div class="container">
-				<div class="box box1">
-					<img src="images/money cake.jpeg" alt="money">
-				</div>
-				<div class="box box2">
-					<img src="iCloud Photos/box of flowers (2).jpg" alt="hamper">
-				</div>
-				<div class="box box3">
-					<img src="images/girl flowers.jpeg" alt="girl">
-				</div>
-				<div class="box box4">
-					<img src="images/glasses metallic.jpeg" alt="glasses">
-				</div>
-				<div class="box box5">
-					<img src="images/giftwrapping.jpeg" alt="gift">
-				</div>
-				<div class="box box6">
-					<img src="images/flowers and chocolates.jpeg" alt="choco">
-				</div>
-				<div class="box box7">
-					<img src="iCloud Photos/box of flowers (1).jpg" alt="box">
-				</div>
-				<div class="box box 8">
-					<img src="images/combo.jpeg" alt="com">
-				</div>
+				</footer>
+				<!-- End Footer -->
+
 			</div>
+			<!--End Main -->
+
 
 		</div>
-	</div>
-	<div class="wrapper">
-
-		<nav class="flex-nav">
-			<ul>
-				<!-- <li><a href="#">Item 01</a></li>
-				<li><a href="#">Item 02</a></li>
-				<li><a href="#">Item 03</a></li>
-				<li><a href="#">Item 04</a></li>
-				<li><a href="#">Item 05</a></li>
-				<li><a href="#">Item 06</a></li> -->
-				<li class="social">
-					<a href="http://twitter.com/@giftware_ug"><i class="fa fa-twitter">   giftware_ug</i></a>
-				</li>
-				<li class="social">
-					<a href="http://facebook.com/wesbos.developer"><i class="fa fa-facebook">  Giftware Ug</i></a>
-				</li>
-				<li class="social">
-					<a href="http://instagram.com/giftware_ug"><i class="fa fa-instagram"> giftware_ug</i></a>
-				</li>
-			</ul>
-		</nav>
-
-	</div>
-	<script>
-		// confirm("Hello World");
-		prompt("open site");
-		console.log("allow");
-		let message = 'Welcome to Giftware ug ';
-		alert(message);
-		let admin, name;
-		    name = "John";
-		    admin = name;
-			alert= (admin);
-
-	</script>
-</body>
+	</body>
 
 </html>

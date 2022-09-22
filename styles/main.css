@@ -306,6 +306,10 @@ button {
   padding: 0.25rem;
 }
 
+article > a > img {
+    height: 478px;
+}
+
 .p-4.border-t {
   padding: 1rem;
   border-top-width: 1px;
@@ -433,7 +437,7 @@ footer {
   }
 
   .columns {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
