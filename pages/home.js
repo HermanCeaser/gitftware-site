@@ -4,11 +4,15 @@ import data from "../data.js";
 
 // const Homepage = products;
 const Homepage = {
-    render: function () {
-        const { products } = data;
-        return `
+ 
+  render: async function () {
+    const { products } = data;
+    return `
+        <h2>Available Products</h2>
         <div class="columns">
-            ${products.map((product) => `
+            ${products
+              .map(
+                (product) => `
                 <div class="card">
                     <article class="shadow-sm rounded bg-white border border-gray-200">
                         <a href="/#/item/${product.id}" class="block relative p-1">
@@ -21,7 +25,7 @@ const Homepage = {
                                 ${product.name}
                             </a>
                             <div class="cta">
-                                <a class="cta1" href="#">
+                                <a id="add_to_cart" class="cta1" href="/#/cart/${product.id}">
                                     Add to cart
                                 </a>
                                 <a class="cta2" href="#">
@@ -31,11 +35,11 @@ const Homepage = {
                         </div>
                     </article>
                 </div>`
-            ).join('\n')}
+              )
+              .join("\n")}
             
         </div>`;
-    }
-
+  },
 };
 
 export default Homepage;

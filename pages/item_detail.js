@@ -1,17 +1,27 @@
-import { getProduct } from "../api.js";
-import { parseRequestUrl } from "../utils.js";
+import {
+  getProduct
+} from "../api.js";
+import {
+  parseRequestUrl
+} from "../utils.js";
 
 const ItemDetailPage = {
-    render: () => {
-        const request = parseRequestUrl();
-        const product = getProduct(request.id);
+  after_render: () => {
+    const request = parseRequestUrl();
+    document.getElementById('add-button').addEventListener('click', () => {
+      document.location.hash = `/cart/${request.id}`;
+    });
+  },
+  render: () => {
+    const request = parseRequestUrl();
+    const product = getProduct(request.id);
 
-        if(product === null){
-            return `<div> No details Found For this Item</div>`;
-        }
-        return `<div class="content">
-        <div class="back-to-result">
-          <a href="/#/">Back to result </a>
+    if (product === null) {
+      return `<div> No details Found For this Item</div>`;
+    }
+    return `<div class="content">
+        <div class="back-to-result ">
+          <a class="primary" href="/#/">Back to result </a>
         </div>
         <div class="details">
           <div class="details-image">
@@ -48,12 +58,12 @@ const ItemDetailPage = {
                     }
                 </li>
                 <li>
-                    <button id="add-button" class="fw primary">Add to Cart </div>
+                    <button type="button" id="add-button" class="fw primary">Add to Cart </div>
               </ul>
           </div>
         </div>
       </div>`
-    }
+  }
 }
 
 export default ItemDetailPage;
