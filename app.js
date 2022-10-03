@@ -2,6 +2,7 @@ import Error404Page from "./pages/error404.js";
 import Homepage from "./pages/home.js";
 import ItemDetailPage from "./pages/item_detail.js";
 import CartPage from './pages/cart.js'
+import SigninPage from "./pages/signin.js";
 import { parseRequestUrl } from "./utils.js";
 
 const routes = {
@@ -9,7 +10,9 @@ const routes = {
     "/item/:id": ItemDetailPage,
     "/cart/:id": CartPage,
     '/cart': CartPage,
+    '/signin': SigninPage,
 };
+
 const router = async () => {
     const request = parseRequestUrl();
     const parseUrl = (request.resource ? `/${request.resource}` : '/') +

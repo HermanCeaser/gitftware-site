@@ -23,7 +23,7 @@ const addToCart = (item, forceUpdate = false) => {
 };
 
 const removeFromCart = (id) => {
-  setCartItems(getCartItems().filter((x) => x.product !== id));
+  setCartItems(getCartItems().filter((x) => x.product !== Number(id)));
 
   if (id === parseRequestUrl().id) {
     document.location.hash = "/cart";
@@ -33,16 +33,30 @@ const removeFromCart = (id) => {
 };
 
 const CartPage = {
-  after_render: async () => {
+  after_render: async() => {
     const qtySelects = document.getElementsByClassName("qty-select");
-    console.log(qtySelects);
-    // Array.from(qtySelects).forEach((qtySelect) => {
-    //   qtySelect.addEventListener("change", (e) => {
-    //     const item = getCartItems().find((x) => x.product === qtySelect.id);
-    //     // console.log(item)
-    //     addToCart({ ...item, qty: Number(e.target.value) }, true);
-    //   });
-    // });
+    // console.log(qtySelects);
+    Array.from(qtySelects).forEach((qtySelect) => {
+      qtySelect.addEventListener("change", (e) => {
+        const item = getCartItems().find(
+          (x) => x.product === Number(qtySelect.id)
+        );
+        // console.log(item)
+        addToCart({ ...item, qty: Number(e.target.value) }, true);
+      });
+    });
+
+    const deleteButtons = document.getElementsByClassName("delete-button");
+    Array.from(deleteButtons).forEach((deleteButton) => {
+      deleteButton.addEventListener("click", (e) => {
+        console.log(e, deleteButton.id);
+        removeFromCart(deleteButton.id);
+      });
+    });
+
+    document.getElementById("checkout-button").addEventListener("click", () => {
+      document.location.hash = "/signin";
+    });
   },
   render: () => {
     const request = parseRequestUrl();
@@ -87,17 +101,17 @@ const CartPage = {
                             Qty: 
                             <select class="qty-select" id="${item.product}">
                             ${[...Array(item.countInStock).keys()].map((x) =>
-                                item.qty === x + 1
-                                ? `<option selected value="${x + 1}">${x + 1}</option>`
+                              item.qty === x + 1
+                                ? `<option selected value="${x + 1}">${
+                                    x + 1
+                                  }</option>`
                                 : `<option  value="${x + 1}">${x + 1}</option>`
                             )}  
 
                             </select>
                             <button type="button" class="delete-button" id="${
-                                item.product
+                              item.product
                             }">
-                                Delete
-                            </button>
                                 Delete
                             </button>
                             </div>

@@ -12,6 +12,7 @@ export default {
             name: "Mini Flower Hamper",
             price: "85000",
             image: "images/mini flowers.jpg",
+            countInStock: 5
         },
         {
             id: 3,
@@ -23,7 +24,7 @@ export default {
         {
             id: 4,
             name: "Party Decorations",
-            price: "Negotiable",
+            price: "400000",
             image: "images/glasses metallic.jpeg",
             countInStock: 10
 
@@ -48,6 +49,7 @@ export default {
             name: "Flower Box",
             price: "110000",
             image: "images/heart shaped flowers.jpg",
+            countInStock: 10
 
         },
         {
